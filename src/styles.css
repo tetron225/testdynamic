@@ -7,3 +7,32 @@
     visibility: hidden;
     font-size: 24px;
 }
+
+#container {
+    display: flex;
+    justify-content: center;
+}
+
+#mainimage {
+    width: 800px;
+    height: 200px;
+    background-color: lightblue;
+}
+
+#firstimg {
+    width:800px;
+    height:200px;
+
+}
+
+#secondimg {
+    display:none;
+    width:800px;
+    height:200px;
+}
+
+#thirdimg {
+    display:none;
+    width:800px;
+    height:200px;
+}

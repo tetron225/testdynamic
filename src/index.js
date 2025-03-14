@@ -1,10 +1,17 @@
 import "./styles.css"
+import brickImage from "./image/brick.jpg"
+
 import {dropdown} from "./dropdown.js"
+import {previouslist, nextlist} from "./carousel.js"
+
 
 let petButton = document.querySelector("#petitems");
 let fruitButton = document.querySelector("#fruititems")
 let dropdownpet = document.querySelector("#dropdown-content");
 let dropdownfruit = document.querySelector("#dropdown-fruit");
+
+let previousarrow = document.querySelector("#left");
+let nextarrow = document.querySelector("#right");
 
 //when clicking this button for pets, it will hide or show the list
 petButton.addEventListener('click', ()=> {
@@ -16,3 +23,10 @@ fruitButton.addEventListener('click', () => {
     dropdown(dropdownfruit);
 })
 
+previousarrow.addEventListener('click', () => {
+    previouslist();
+})
+
+nextarrow.addEventListener('click', () => {
+    nextlist();
+})
