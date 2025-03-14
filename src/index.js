@@ -29,3 +29,5 @@ previousarrow.addEventListener('click', () => {
 nextarrow.addEventListener('click', () => {
     nextlist();
 })
+
+setInterval(nextlist, 5000);
