@@ -36,3 +36,23 @@
     width:800px;
     height:200px;
 }
+
+#container2 {
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    gap: 5px;
+}
+
+.dot {
+    border: solid black;
+    border-radius: 20px;
+    background-color: lightgray;
+    width: 10px;
+    height:10px;
+    outline-color: black;
+}
+
+#first {
+    background-color: white;
+}

@@ -1,5 +1,4 @@
 import "./styles.css"
-import brickImage from "./image/brick.jpg"
 
 import {dropdown} from "./dropdown.js"
 import {previouslist, nextlist} from "./carousel.js"

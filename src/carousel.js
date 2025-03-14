@@ -1,32 +1,59 @@
 const previouslist = () => {
     let allclass = document.getElementsByClassName("image");
+    let alldot = document.getElementsByClassName('dot');
     let found = false;
     let i = 0;
     while(!found) {
-        console.log(allclass[i])
-        console.log(window.getComputedStyle(allclass[i]).display);
-        let element = window.getComputedStyle(allclass[i]).display
-        console.log(element);
-       if(element !== 'none') {
-            if(i-- < 0) {
+        let element = window.getComputedStyle(allclass[i]).display;
+        if(element !== 'none') {
+            if(i-1 < 0) {
                 allclass[i].style.display = 'none';
-                i = allclass.length-1
-                console.log('hit')
+                alldot[i].style.backgroundColor = 'lightgray';
+                i = allclass.length-1;
                 allclass[i].style.display = 'inline';
+                alldot[i].style.backgroundColor = 'white';
+                
             } else {
                 allclass[i].style.display = 'none';
+                alldot[i].style.backgroundColor = 'lightgray';
                 i--;
                 allclass[i].style.display = 'inline';
+                alldot[i].style.backgroundColor = 'white';
             }
             found = true;
        } else {
             i++;
        }
     }
+       
 }
 
 const nextlist = () => {
-
+    let allclass = document.getElementsByClassName("image");
+    let alldot = document.getElementsByClassName('dot');
+    let found = false;
+    let i = 0;
+    while(!found) {
+        let element = window.getComputedStyle(allclass[i]).display;
+        if(element !== 'none') {
+            if(i+1 >= allclass.length) {
+                allclass[i].style.display = 'none';
+                alldot[i].style.backgroundColor = 'lightgray';
+                i = 0;
+                allclass[i].style.display = 'inline';
+                alldot[i].style.backgroundColor = 'white';
+            } else {
+                allclass[i].style.display = 'none';
+                alldot[i].style.backgroundColor = 'lightgray';
+                i++;
+                allclass[i].style.display = 'inline';
+                alldot[i].style.backgroundColor = 'white';
+            }
+            found = true;
+        } else {
+            i++;
+        }
+    }
 }
 
 export { previouslist, nextlist };
